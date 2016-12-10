@@ -11,6 +11,14 @@ private:
 	int ratioRank;
 	double LLX, LLY;
 public:
+	Module() { 
+		HWRatio.resize(0); 
+		ifReflect = false; 
+		Rotate = 0;
+		ratioRank = 0;
+	}
+	void setArea(double);
+	void addRatio(double);
 	double getH();
 	double getW();
 	double getLeftLowerX();

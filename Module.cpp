@@ -69,3 +69,11 @@ void Module::reflect() {
 void Module::rotateClockWise() {
 	Rotate = (Rotate + 1) % 4;
 }
+
+void Module::setArea(double area) {
+	this->Area = area;
+}
+
+void Module::addRatio(double ratio) {
+	HWRatio.push_back(ratio);
+}

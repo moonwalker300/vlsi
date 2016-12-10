@@ -23,10 +23,15 @@ private:
 	void calcLongPath(Node*, Node*);
 	bool buildGraph();
 public:
+	int getModuleNum() { return moduleNum; }
+	Module getModule(int i) { return modules[i]; }
 	void findNeibor();
 	void placeModule();
-	double Evaluate();
-	CornerBlockList(std::vector<Module>&, double);
+	double Evaluate(double& totArea, double& wireLen);
+	CornerBlockList(std::vector<NetList>&, std::vector<Module>&, double);
+	CornerBlockList();
+	void copySolution(CornerBlockList&);
+	void copyModel(CornerBlockList&);
 };
 
 #endif
